@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<robot name="m100" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+    
+    <!-- The base_link of M100 -->
+    <xacro:include filename="$(find m100_ros_simulation)/urdf/m100_base.urdf.xacro" />
+    <xacro:quadrotor_base_macro />
+    <xacro:include filename="$(find m100_ros_simulation)/urdf/m100_propellers.urdf.xacro"/>
+    <xacro:propeller/>
+
+    <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_common_library.urdf.xacro" />
+    <xacro:include filename="$(find kobuki_description)/urdf/kobuki.urdf.xacro" />
+    <xacro:include filename="$(find turtlebot_description)/urdf/stacks/hexagons.urdf.xacro"/>
+    <xacro:include filename="$(find turtlebot_description)/urdf/sensors/r200.urdf.xacro"/>
+  
+    <kobuki/>
+    <stack_hexagons parent="base_link"/>
+    <sensor_r200  parent="base_link"/>
+
+
+
+           
+</robot>

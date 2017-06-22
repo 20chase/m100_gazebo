@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<robot name="m100_r200" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="common_library.urdf.xacro" />
+  <xacro:include filename="m100_base_r200.xacro" />
+  <xacro:include filename="r200.urdf.xacro"/>
+  
+  <m100_r200/>
+  <sensor_r200  parent="base_link"/>
+</robot>

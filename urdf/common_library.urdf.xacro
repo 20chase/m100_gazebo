@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- General -->
+  <xacro:include filename="common_properties.urdf.xacro"/>
+  <xacro:include filename="m100_properties.urdf.xacro"/>
+</robot>
