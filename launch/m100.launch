@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- start the gazebo world -->
+    <include file="$(find m100_gazebo)/launch/world.launch">
+    </include>
+
+    <!-- Spawn the UAV of DJI-M100 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find m100_gazebo)/urdf/m100.xacro" />
+    <node name="spawn_m100" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	    args="-urdf -model m100 -param robot_description"/>
+    
+</launch>
